@@ -1,0 +1,22 @@
+.btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #556e80;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #a1d7ff;
+    color: #556e80;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  

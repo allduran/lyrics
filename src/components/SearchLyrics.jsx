@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import axios from 'axios';
+import Button from './Button';
 
 const SearchLyrics = () => {
   const [artist, setArtist] = useState('');
@@ -39,7 +40,8 @@ const SearchLyrics = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <button onClick={searchLyrics}>Search Lyrics</button>
+      
+      <Button onClick={searchLyrics}>Search Lyrics</Button>
 
       {error && <p>{error}</p>}
       {lyrics && <pre>{lyrics}</pre>}
