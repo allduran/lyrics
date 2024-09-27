@@ -1,0 +1,17 @@
+ 
+  .toggle-language {
+    background: #202940;
+    border: 1px solid #b97640;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    color: #DADADA;
+    width: 4.5rem;
+    height: 3.5rem;
+  }
+  
+  .toggle-language:hover {
+    opacity: 0.8;
+  }
+  

@@ -1,9 +1,6 @@
 .toggle-theme {
     border: none;
     cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
   }
 
   .toggle-dark {

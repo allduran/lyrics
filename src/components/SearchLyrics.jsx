@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Button from './Button';
+import { useLanguage } from '../context/useLanguage';
+
 
 const SearchLyrics = () => {
   const [artist, setArtist] = useState('');
@@ -9,20 +11,22 @@ const SearchLyrics = () => {
   const [lyrics, setLyrics] = useState('');
   const [error, setError] = useState('');
 
+  const { language } = useLanguage();
+
   const searchLyrics = async () => {
     setLyrics('');
     setError('');
 
     if (!artist || !title) {
-      setError('Please provide both artist and song title');
+      setError(language === 'EN' ? 'Please provide both artist and song title' : 'Por favor, proporciona tanto el artista como el título de la canción');
       return;
     }
 
     try {
       const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${title}`);
-      setLyrics(response.data.lyrics || 'Lyrics not found');
+      setLyrics(response.data.lyrics || (language === 'EN' ? 'Lyrics not found' : 'Letra no encontrada'));
     } catch (err) {
-      setError('Lyrics not found');
+      setError(language === 'EN' ? 'Lyrics not found' : 'Letra no encontrada');
     }
   };
 
@@ -30,18 +34,20 @@ const SearchLyrics = () => {
     <div>
       <input
         type="text"
-        placeholder="Artist"
+        placeholder={language === 'EN' ? 'Artist' : 'Artista'}
         value={artist}
         onChange={(e) => setArtist(e.target.value)}
       />
       <input
         type="text"
-        placeholder="Song Title"
+        placeholder={language === 'EN' ? 'Song Title' : 'Título de la Canción'}
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       
-      <Button onClick={searchLyrics}>Search Lyrics</Button>
+      <Button onClick={searchLyrics}>
+        {language === 'EN' ? 'Search Lyrics' : 'Buscar Letra'}
+      </Button>
 
       {error && <p>{error}</p>}
       {lyrics && <pre>{lyrics}</pre>}
