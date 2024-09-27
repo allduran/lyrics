@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('EN'); // Default language is English
+  const [language, setLanguage] = useState('EN');
 
   const toggleLanguage = () => {
     setLanguage((prevLanguage) => (prevLanguage === 'EN' ? 'ES' : 'EN'));
