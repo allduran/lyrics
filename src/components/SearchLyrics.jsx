@@ -34,13 +34,13 @@ const SearchLyrics = () => {
     <div>
       <input
         type="text"
-        placeholder={language === 'EN' ? 'Artist' : 'Artista'}
+        placeholder={language === 'EN' ? 'Artist...' : 'Artista...'}
         value={artist}
         onChange={(e) => setArtist(e.target.value)}
       />
       <input
         type="text"
-        placeholder={language === 'EN' ? 'Song Title' : 'Título de la Canción'}
+        placeholder={language === 'EN' ? 'Song Title...' : 'Título de la Canción....'}
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />

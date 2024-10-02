@@ -1,32 +1,65 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Light Mode */
+body {
+  background-color: #f8f8f8;
+  color: #273341;
+}
+
 .toggle-theme {
-    border: none;
-    cursor: pointer;
-  }
+  background: transparent;
+  border: 2px solid black;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transition: .2s ease;
+  font-weight: bold;
+}
 
-  .toggle-dark {
-    background: #202940;
-    border: 1px solid #b97640;
-  }
+.toggle-theme:hover{
+  transform: scale(1.08);
+}
+.bi {
+  color: black;
+  font-size: 1.5rem;
+}
 
-  .toggle-light {
-    background: #b97640;
-    border: 1px solid #202940;
-  }
-  
-  .toggle-theme img {
-    width: 30px;
-    height: 30px;
-  }
-  
-  /* Light Mode */
-  body {
-    background-color: #DADADA;
-    color: #273341;
-  }
-  
-  /* Dark Mode */
-  body.dark-mode {
-    background-color: #273341;
-    color: #DADADA;
-  }
-  
+.toggle-dark {
+  border: 1px solid #b97640;
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #080e30;
+  color: #DADADA;
+}
+
+body.dark-mode .bi {
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+
+body.dark-mode .toggle-theme {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: .2s ease;
+}
+
+body.dark-mode input{
+  border-bottom: 3px solid var(--main-color);
+}
+
+body.dark-mode ::placeholder{
+  color: #DADADA;
+}
+
+body.dark-mode input{
+  color: #DADADA;
+}

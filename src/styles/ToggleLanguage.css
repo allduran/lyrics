@@ -1,17 +1,25 @@
  
   .toggle-language {
-    background: #202940;
-    border: 1px solid #b97640;
+    background: transparent;
+    border: 2px solid black;
     font-size: 16px;
     cursor: pointer;
     padding: 10px;
     border-radius: 5px;
-    color: #DADADA;
-    width: 4.5rem;
+    color: black;
+    width: 3.5rem;
     height: 3.5rem;
+    border-radius: 50%;
+    transition: .2s ease;
+    font-weight: 600;
   }
   
   .toggle-language:hover {
-    opacity: 0.8;
+    transform: scale(1.08);
+  }
+
+  body.dark-mode .toggle-language{
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
   }
   
