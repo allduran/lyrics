@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import '../styles/ToggleSwitch.css';
-import sun from '../assets/sun.svg';
-import moon from '../assets/moon.svg';
 
 const ToggleSwitch = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -20,8 +18,8 @@ const ToggleSwitch = () => {
 
     return (
         <button className={isDarkMode ? 'toggle-theme toggle-dark' : 'toggle-theme toggle-light'} onClick={toggleTheme}>
-            <img src={isDarkMode ? moon : sun} alt="Theme Icon" />
-        </button>
+            <i class={isDarkMode ? "bi bi-moon-fill" : "bi bi-sun-fill"}></i>
+            </button>
     )
 };
 
