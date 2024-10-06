@@ -50,7 +50,7 @@ const SearchLyrics = () => {
       </Button>
 
       {error && <p>{error}</p>}
-      {lyrics && <pre>{lyrics}</pre>}
+      {lyrics && <div className='lyrics'>{lyrics}</div>}
     </div>
   );
 };

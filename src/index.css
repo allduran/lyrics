@@ -19,8 +19,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 100%;
-  min-height: 100vh;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -35,5 +35,10 @@ button {
   padding: 10px 20px;
   cursor: pointer;
 
+}
+.lyrics {
+  
+    white-space: pre-wrap;
+    
 }
 
